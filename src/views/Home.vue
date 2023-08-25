@@ -1,6 +1,6 @@
 <template>
   <div style="width: 100%; display: flex; justify-content: center; margin-top: 16px;" ref="logo">
-    <img src="../assets/logo.webp" style="width: 40%;" alt="BlueWave Logo"/>
+    <img src="../assets/logo.webp" class="logo" alt="BlueWave Logo"/>
   </div>
 
 <section id="about">
@@ -18,5 +18,21 @@
 </script>
 
 <style scoped>
+.logo {
+  width: 40%;
+}
 
+@media only screen and (max-width: 850px) {
+  .logo {
+    margin-top: 10px;
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    margin-top: 10px;
+    width: 70%;
+  }
+}
 </style>
