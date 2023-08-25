@@ -20,6 +20,13 @@ import Home from "./views/Home.vue";
 
   > div {
     width: 70%;
+    transition: width ease-in-out 250ms;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container > div {
+    width: 90% !important;
   }
 }
 </style>

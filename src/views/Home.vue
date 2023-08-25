@@ -20,6 +20,7 @@
 <style scoped>
 .logo {
   width: 40%;
+  transition: width 250ms ease-in-out;
 }
 
 @media only screen and (max-width: 850px) {
