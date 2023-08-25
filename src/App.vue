@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar.vue";
 import Home from "./views/Home.vue";
 </script>
 
-<template style="height: 100vh">
+<template>
   <Navbar/>
   <div class="container">
     <div>
@@ -15,6 +15,7 @@ import Home from "./views/Home.vue";
 <style scoped>
 .container {
   width: 100vw;
+  height: 100%;
   display: flex;
   justify-content: center;
 

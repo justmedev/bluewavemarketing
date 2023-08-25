@@ -22,6 +22,7 @@
     </div>
   </nav>
 
+<Transition>
   <div
       style="z-index: 1000; background: rgba(0,0,0,.5); position: absolute; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center"
       v-if="showMobileNav" @click="showMobileNav = false">
@@ -29,6 +30,7 @@
       <button class="block" style="margin-bottom: 2px;" v-for="item in navItems" :href="item.target">{{ item.title }}</button>
     </div>
   </div>
+</Transition>
 </template>
 
 <script setup lang="ts">
@@ -163,5 +165,15 @@ nav {
   to {
     width: 6rem;
   }
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.15s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 </style>
