@@ -1,24 +1,67 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
   <nav>
-    <div>
+    <div style="display: flex; align-items: center">
       <div>
-        <img src="../assets/logo.webp" height="28px" alt="Bluewave marketing logo"
-             style="background: #f9f9f9; border-radius: 3px"/>
+        <img src="../assets/logo.webp" alt="Bluewave marketing logo"
+             style="background: #f9f9f9; border-radius: 3px; height: 40px"/>
       </div>
-      <a href="#about">About</a>
-      <a href="#knowledge">Knowledge</a>
-      <a href="#projects">Projects</a>
+      <template v-if="!useMobileNav">
+        <a :href="item.target" v-for="item in navItems">{{ item.title }}</a>
+      </template>
     </div>
 
     <div class="right">
-      <a href="mailto:boehm@bluewavemarketing.at?subject=Kontaktaufnahme%20via%20Web">Contact Us</a>
+      <a href="mailto:boehm@bluewavemarketing.at?subject=Kontaktaufnahme%20via%20Web" v-if="!useMobileNav">
+        Contact Us
+      </a>
+      <button v-else @click="showMobileNav = !showMobileNav">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" height="24" style="margin-right: 0">
+          <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"/>
+        </svg>
+      </button>
     </div>
   </nav>
+
+  <div
+      style="z-index: 1000; background: rgba(0,0,0,.5); position: absolute; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center"
+      v-if="showMobileNav" @click="showMobileNav = false">
+    <div class="card">
+      <button class="block" style="margin-bottom: 2px;" v-for="item in navItems" :href="item.target">{{ item.title }}</button>
+    </div>
+  </div>
 </template>
+
+<script setup lang="ts">
+import { onMounted, onUnmounted, ref } from "vue";
+
+const useMobileNav = ref(false);
+const showMobileNav = ref(false);
+
+const navItems = [
+  {
+    title: 'About',
+    target: '#about',
+  },
+  {
+    title: 'Knowledge',
+    target: '#knowledge',
+  },
+  {
+    title: 'Projects',
+    target: '#projects',
+  },
+];
+
+onMounted(onResize);
+window.addEventListener('resize', onResize);
+onUnmounted(() => {
+  window.removeEventListener('resize', onResize);
+});
+
+function onResize() {
+  useMobileNav.value = window.innerWidth < 1000;
+}
+</script>
 
 <style scoped lang="scss">
 $navbarBack: #222;

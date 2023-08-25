@@ -1,85 +1,109 @@
 @font-face {
-  font-family: "Poppins";
-  src: url("./assets/fonts/poppins/Poppins-Regular.ttf");
+    font-family: "Poppins";
+    src: url("./assets/fonts/poppins/Poppins-Regular.ttf");
 }
 
 @font-face {
-  font-family: "Poppins Black";
-  src: url("./assets/fonts/poppins/Poppins-Black.ttf");
+    font-family: "Poppins Black";
+    src: url("./assets/fonts/poppins/Poppins-Black.ttf");
 }
 
 @font-face {
-  font-family: "Poppins Bold";
-  src: url("./assets/fonts/poppins/Poppins-Bold.ttf");
+    font-family: "Poppins Bold";
+    src: url("./assets/fonts/poppins/Poppins-Bold.ttf");
 }
 
 @font-face {
-  font-family: "Poppins Medium";
-  src: url("./assets/fonts/poppins/Poppins-Medium.ttf");
+    font-family: "Poppins Medium";
+    src: url("./assets/fonts/poppins/Poppins-Medium.ttf");
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
 }
+
 a:hover {
-  color: #535bf2;
+    color: #535bf2;
 }
 
 body {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  color-scheme: light dark;
-  margin: 0;
-  padding: 0;
-  color: #1a1a1a;
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    color-scheme: light dark;
+    margin: 0;
+    padding: 0;
+    color: #1a1a1a;
 }
 
 ::selection {
-  background: #0071bc;
+    background: #0071bc;
 }
 
 h1 {
-  font-size: 3.2em;
-  margin-bottom: -10px;
+    font-size: 3.2em;
+    margin-bottom: -10px;
 }
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+
+button, .button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.5em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: all ease-in-out 0.25s;
+
+    &:hover {
+        background: rgb(1, 128, 211);
+    }
+
+    &:active {
+        background: #0071bc;
+    }
+
+    & :focus, :focus-visible {
+        outline: 4px auto -webkit-focus-ring-color;
+    }
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+.block {
+    width: 100%;
 }
 
 .card {
-  padding: 2em;
+    background: white;
+    width: 80%;
+    border-radius: 10px;
+    padding: 10px;
+    -webkit-box-shadow: 0 0 55px -15px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 55px -15px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0 0 55px -15px rgba(0, 0, 0, 0.75);
+}
+
+.card-title {
+    font-size: 22px;
+    font-family: "Poppins Medium", 'Inter', sans-serif;
 }
 
 h1 {
-  font-family: 'Poppins Medium', sans-serif;
-  font-weight: bold;
+    font-family: "Poppins Medium", 'Inter', sans-serif;
+    font-weight: bold;
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+    :root {
+        color: #213547;
+        background-color: #ffffff;
+    }
+
+    a:hover {
+        color: #747bff;
+    }
+
+    button {
+        background-color: #f9f9f9;
+    }
 }
