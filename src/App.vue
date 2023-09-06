@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import Navbar from "./components/Navbar.vue";
 import Home from "./views/Home.vue";
+
+function openInstagram() {
+  window.open("https://instagram.com/bluewavemarketing.at", "_blank");
+}
 </script>
 
 <template>
@@ -15,14 +19,37 @@ import Home from "./views/Home.vue";
       <div>
         &copy; bluewavemarketing.at 2023 - present &ctdot; All rights reserved
       </div>
-      <div style="display: flex; align-items: center">
-        <img src="./assets/instagram.svg" alt="Folge uns auf Instagram" style="width: 20px; margin-right: 5px;"/> @bluewavemarketing.at
+      <div class="instagram">
+        <img src="./assets/instagram.svg" alt="Folge uns auf Instagram" @click="openInstagram"/>
+        <a href="https://instagram.com/bluewavemarketing.at" target="_blank">
+          @bluewavemarketing.at
+        </a>
       </div>
     </div>
   </footer>
 </template>
 
 <style scoped lang="scss">
+.instagram {
+  display: flex;
+  align-items: center;
+
+  > img {
+    cursor: pointer;
+    width: 20px;
+    margin-right: 5px;
+  }
+
+  > a {
+    color: #c2c2c2 !important;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+      color: #fff !important;
+    }
+  }
+}
+
 footer {
   user-select: none;
   position: absolute;
