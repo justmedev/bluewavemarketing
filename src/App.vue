@@ -17,7 +17,11 @@ function openInstagram() {
   <footer>
     <div>
       <div>
-        &copy; bluewavemarketing.at 2023 - present &ctdot; All rights reserved
+        &copy; bluewavemarketing.at 2023 - present
+        <div class="ctdot">&ctdot;</div>
+        <div>
+          All rights reserved
+        </div>
       </div>
       <div class="instagram">
         <img src="./assets/instagram.svg" alt="Folge uns auf Instagram" @click="openInstagram"/>
@@ -58,6 +62,18 @@ footer {
   background: #1a1a1a;
   color: #c2c2c2;
 
+  > :first-child {
+    > div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  .ctdot {
+    margin: 10px;
+  }
+
   > div {
     margin: 5px 10px;
 
@@ -85,5 +101,26 @@ footer {
   .container > div {
     width: 90% !important;
   }
+}
+
+@media only screen and (max-width: 720px) {
+
+footer {
+  padding: 20px 5px;
+
+  > div {
+    text-align: center;
+    flex-direction: column !important;
+
+    > :first-child {
+      margin-bottom: 5px !important;
+      flex-direction: column;
+    }
+  }
+}
+
+.ctdot {
+  display: none;
+}
 }
 </style>
