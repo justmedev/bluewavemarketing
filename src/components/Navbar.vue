@@ -41,12 +41,12 @@ const showMobileNav = ref(false);
 
 const navItems = [
   {
-    title: 'About',
+    title: 'Was wir bieten',
     target: '#about',
   },
   {
-    title: 'Knowledge',
-    target: '#knowledge',
+    title: 'Unsere Methode',
+    target: '#our-method',
   },
   {
     title: 'Projects',
