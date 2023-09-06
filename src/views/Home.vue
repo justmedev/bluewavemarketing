@@ -31,7 +31,7 @@
       weitere Attribute nach denen wir
       die Posts richten. Danach lernen wir kontinuierlich Ihr Publikum und verbessern den Content und die
       Content-Quality stetig. Sie wählen die Plattformen auf denen wir Ihren Content veröffentlichen: sei es Instagram,
-      Facebook, Twitter (x), usw und sorgen dafür, dass sich ihre Postings vom Rest abheben. Wir arbeiten ständig an
+      Facebook, X (Twitter), usw und sorgen dafür, dass sich ihre Postings vom Rest abheben. Wir arbeiten ständig an
       der Verbesserung unserer Taktiken.
     </div>
   </section>
