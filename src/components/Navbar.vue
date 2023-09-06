@@ -48,10 +48,6 @@ const navItems = [
     title: 'Unsere Methode',
     target: '#our-method',
   },
-  {
-    title: 'Projects',
-    target: '#projects',
-  },
 ];
 
 onMounted(onResize);
