@@ -15,8 +15,8 @@ import Home from "./views/Home.vue";
       <div>
         &copy; bluewavemarketing.at 2023 - present &ctdot; All rights reserved
       </div>
-      <div>
-
+      <div style="display: flex; align-items: center">
+        <img src="./assets/instagram.svg" alt="Folge uns auf Instagram" style="width: 20px; margin-right: 5px;"/> @bluewavemarketing.at
       </div>
     </div>
   </footer>
@@ -30,12 +30,15 @@ footer {
   width: 100%;
   background: #1a1a1a;
   color: #c2c2c2;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 
   > div {
     margin: 5px 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
   }
 }
 
