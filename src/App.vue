@@ -34,6 +34,10 @@ function openInstagram() {
 </template>
 
 <style scoped lang="scss">
+main {
+  flex: 1 0 auto;
+}
+
 .instagram {
   display: flex;
   align-items: center;
@@ -56,11 +60,10 @@ function openInstagram() {
 
 footer {
   user-select: none;
-  position: absolute;
-  bottom: 0;
   width: 100%;
   background: #1a1a1a;
   color: #c2c2c2;
+  flex-shrink: 0;
 
   > :first-child {
     > div {
